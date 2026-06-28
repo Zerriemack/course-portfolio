@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #100f0d;
+    --surface: #1c1a16;
+    --surface-light: #27231d;
+    --gold: #c7a667;
+    --gold-light: #ead7a8;
+    --text: #eee8dc;
+    --muted: #b9b0a1;
+    --border: #5c4c31;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #332b1d 0, transparent 32rem),
+        var(--background);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+.site-header,
+main {
+    width: min(100% - 2rem, 75rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    padding: 4rem 0 2.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+}
+
+h1 {
+    margin: 0;
+    color: var(--gold-light);
+    font-size: clamp(2.5rem, 9vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.introduction {
+    max-width: 40rem;
+    margin: 1rem auto 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+main {
+    padding: 2.5rem 0 4rem;
+}
+
+h2 {
+    margin: 0 0 1.5rem;
+    color: var(--gold-light);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.collection-card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    overflow: hidden;
+    background: linear-gradient(145deg, var(--surface-light), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 35%);
+    transition:
+        border-color 180ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.collection-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 50%);
+    transform: translateY(-0.3rem);
+}
+
+.collection-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-content {
+    padding: 1.4rem;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: var(--gold-light);
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.card-content p {
+    margin-bottom: 0;
+}
+
+.details {
+    min-height: 3rem;
+    color: var(--gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+@media (width >= 480px) {
+    .collection-card {
+        flex-basis: 45%;
+    }
+}
+
+@media (width >= 1024px) {
+    .collection-card {
+        flex-basis: 30%;
+    }
+}
