@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Detail | Navigation Lab</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <p class="eyebrow">Navigation Lab · Detail view</p>
+            <nav class="nav-boxed" aria-label="Main navigation">
+                <a href="../index.html"><span>01</span>Home</a>
+                <a href="../about.html"><span>02</span>About</a>
+                <a class="active" href="index.html"><span>03</span>Projects</a>
+                <a href="../gallery/"><span>04</span>Gallery</a>
+            </nav>
+        </header>
+        <main>
+            <section class="content-panel">
+                <p class="section-label">Nested route test</p>
+                <h1>Project Detail</h1>
+                <p>This nested detail page tests links back to the root homepage, the about page, the projects index, and the gallery.</p>
+                <a class="text-link" href="index.html">← Back to projects</a>
+            </section>
+            <section class="path-grid" aria-labelledby="detail-path-heading">
+                <div>
+                    <p class="section-label">Connection check</p>
+                    <h2 id="detail-path-heading">Every route stays relative</h2>
+                </div>
+                <p>Even from this detail page, each destination is reached without an absolute URL.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Navigation Lab · CMPA 3304</p>
+        </footer>
+    </body>
+</html>

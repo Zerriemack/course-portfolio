@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects | Navigation Lab</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <p class="eyebrow">Navigation Lab · Nested page</p>
+            <nav class="nav-centered" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a class="active" href="index.html">Projects</a>
+                <a href="../gallery/">Gallery</a>
+            </nav>
+        </header>
+        <main>
+            <section class="content-panel">
+                <p class="section-label">Folder level 01</p>
+                <h1>Projects</h1>
+                <p>This page lives inside a nested folder, so its navigation needs paths that move up one folder level.</p>
+                <a class="button-link" href="project-detail.html">View project detail</a>
+            </section>
+            <section class="path-grid" aria-labelledby="project-path-heading">
+                <div>
+                    <p class="section-label">Path spotlight</p>
+                    <h2 id="project-path-heading">Moving up and across</h2>
+                </div>
+                <p>The <code>../</code> pattern moves up to the lab root before a link enters another folder.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Navigation Lab · CMPA 3304</p>
+        </footer>
+    </body>
+</html>
